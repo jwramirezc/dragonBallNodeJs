@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Dragon Ball</title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/61a9bf8976.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <main class="principal">
+        <h1 class="titulo">Dragon Ball JG</h1>
+        <section id="select-guerrero">
+            <div id="contenedor-tarjetas" class="grupo-tarjetas">
+            </div>
+
+        </section>
+
+        <div class="texto-eleccion">
+            <span id="eligiendo-guerrero"></span>
+        </div>
+
+        <button id="btn-batalla">Iniciar Batalla</button>
+
+        <section id="ver-mapa">
+
+            <h2 class="subtitulo">Recorre el mapa con tu guerrero</h1>
+
+                <canvas id="mapa"></canvas>
+
+        </section>
+
+        <section id="agrupa-btn-mover">
+            <div class="agrupa-btn-direcciones">
+                | <button ontouchstart="detenerMovimiento()" ontouchend="moverGuerreroLeft()"
+                    onmouseup="detenerMovimiento()" onmousedown="moverGuerreroLeft()" class="btn-direcciones"><i
+                        class="fa-solid fa-circle-left"></i></button>
+                <button ontouchstart="detenerMovimiento()" ontouchend="moverGuerreroDown()"
+                    onmouseup="detenerMovimiento()" onmousedown="moverGuerreroDown()" class="btn-direcciones"><i
+                        class="fa-solid fa-circle-down"></i></button>
+                <button ontouchstart="detenerMovimiento()" ontouchend="moverGuerreroUp()"
+                    onmouseup="detenerMovimiento()" onmousedown="moverGuerreroUp()" class="btn-direcciones"><i
+                        class="fa-solid fa-circle-up"></i></button>
+                <button ontouchstart="detenerMovimiento()" ontouchend="moverGuerreroRight()"
+                    onmouseup="detenerMovimiento()" onmousedown="moverGuerreroRight()" class="btn-direcciones"><i
+                        class="fa-solid fa-circle-right"></i></button>
+            </div>
+        </section>
+
+        <section id="seccion-muestra-seleccion">
+
+            <div class="tarjeta-jugador">
+                <span class="label-tarjetas">Guerrero</span>
+                <img id="guerrero-elegido" src="" alt="Guerrero elegido" class="guerrero-tarjeta">
+                <span id="guerrero-jugador"></span>
+                <span class="linea-tarjeta">-----</span>
+                <div class="span-jugada" id="ataque-jugador"></div>
+                <div id="seccion-puntaje-jugador" class="secciones-puntaje">
+                    <span class="puntaje" id="vidas-jugador">0</span>
+                    <span class="text-vidas">Victorias</span>
+                </div>
+            </div>
+
+            <div class="versus">Vs</div>
+
+            <div class="tarjeta-jugador">
+                <span class="label-tarjetas">Oponente</span>
+                <img id="enemigo-elegido" src="" alt="Enemigo elegido" class="guerrero-tarjeta">
+                <span id="guerrero-enemigo"></span>
+                <span class="linea-tarjeta">-----</span>
+                <span class="span-jugada" id="ataque-enemigo"></span>
+                <div id="seccion-puntaje-enemigo" class="secciones-puntaje">
+                    <span class="puntaje" id="vidas-enemigo">0</span>
+                    <span class="text-vidas">Victorias</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="select-ataque">
+            <div class="elige-ataque">
+                <h2>Elige tu ataque:</h2>
+            </div>
+            <div id="contenedor-ataques" class="botones-ataque ">
+            </div>
+        </section>
+
+
+        <section id="seccion-ataques">
+            <section id="resultado">
+                <div>
+                    <p><span id="resultado-combate"></span></p>
+                </div>
+            </section>
+        </Section>
+
+        <section>
+            <div id="game-over">
+                <p>GAME OVER</p>
+            </div>
+        </section>
+
+
+
+        <section id="zona-reinicio">
+            <div id="reiniciar">
+                <p>
+                    <button id="btn-reiniciar" class="botones">Reintentar</button>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="./js/ataque.js"></script>
+
+</body>
+
+</html>

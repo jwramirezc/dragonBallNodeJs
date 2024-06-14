@@ -1,0 +1,424 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(58, 58, 58, 0.885);
+}
+
+main {
+    background-color: rgb(238, 238, 238);
+    padding: 20px;
+    width: 100%;
+    background-image: url(./img/fondo.jpg);
+}
+
+h1 {
+    font-size: 5rem;
+    margin: 10px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    /* margin-bottom: 30px; */
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+h4 {
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+p {
+    margin: 5px;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#select-guerrero {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#select-ataque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.botones {
+    background-color: #FF6500;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin: 15px;
+    width: 15rem;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.8rem;
+    box-shadow: 0 0 10px 5px white;
+}
+
+.botones:hover {
+    background-color: #e10c0c;
+    cursor: pointer;
+}
+
+.botones:disabled {
+    background-color: #656464;
+    color: rgb(204, 204, 204);
+    cursor: none;
+}
+
+button#btn-batalla {
+    cursor: pointer;
+}
+
+button#btn-batalla:hover {
+    background-color: #e10c0c;
+}
+
+#seccion-muestra-seleccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-tarjetas {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #C40C0C;
+}
+
+.tarjeta-jugador {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    /* width: 20rem;
+    height: 30rem; */
+    border-radius: 15px;
+    font-size: 1.8rem;
+    background-color: rgba(255, 255, 255, 0.507);
+}
+
+.guerrero-tarjeta {
+    width: 15rem;
+}
+
+.versus {
+    font-size: 3rem;
+    text-align: center;
+    width: 9rem;
+    font-weight: bold;
+    color: #C40C0C;
+    text-shadow: 0 0 5px #fefefd;
+}
+
+
+.batalla {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(255, 204, 187);
+    font-weight: bold;
+}
+
+#zona-reinicio {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 30px;
+    align-items: center;
+}
+
+.labels-guerreros {
+    display: inline-block;
+    flex-direction: row;
+    font-size: 1.6rem;
+    margin: 2rem;
+}
+
+.labels-guerreros label {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.labels-guerreros input {
+    cursor: pointer;
+}
+
+#guerrero-jugador,
+#guerrero-enemigo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #C40C0C;
+
+}
+
+.elige-ataque {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.texto-eleccion {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.botones-ataque {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.linea-tarjeta {
+    color: #e10c0c;
+}
+
+.span-jugada {
+    font-size: 1.9rem;
+    margin-top: 2rem;
+    color: #C40C0C;
+    font-weight: bold;
+}
+
+#resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    background-color: rgba(255, 255, 255, 0.507);
+    color: #e10c0c;
+    border-radius: 1rem;
+}
+
+#resultado p {
+    margin: 10px;
+}
+
+#game-over {
+    margin-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 4rem;
+    background-color: rgba(255, 255, 255, 0.507);
+    color: #e10c0c;
+    font-weight: bold;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+#resultado #resultado-combate {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+#resultado1 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    background-color: rgb(12, 146, 255);
+    color: white;
+}
+
+#vidas-jugador,
+#vidas-enemigo {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.puntaje{
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    background-color: #C40C0C;
+    border: 2px solid rgb(217, 71, 71);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.text-vidas{
+color: #C40C0C;    
+}
+
+#fin-juego {
+    font-size: 3rem;
+    color: #C40C0C;
+    font-weight: bolder;
+    text-align: center;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label{
+    background-color: red;
+}
+
+.grupo-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.secciones-puntaje{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 1rem;
+}
+
+.tarjeta img {
+    width: 60%;
+}
+
+.tarjeta img:hover {
+    filter: grayscale(30%);
+    cursor: pointer;
+}
+
+label {
+    background-color: #FF6500;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    width: 15rem;
+    border-radius: 40px;
+    font-size: 1.8rem;
+    box-shadow: 0 0 10px 5px white;
+}
+
+label:hover {
+    background-color: #FF8A08;
+    cursor: pointer;
+}
+
+#eligiendo-guerrero {
+    font-size: 4rem;
+    margin-top: 1.8rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+button#btn-batalla {
+    background-color: #C40C0C;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 18rem;
+    border-radius: 40px;
+    font-size: 2rem;
+    box-shadow: 0 0 10px 5px rgb(233, 137, 137);
+}
+
+@media (max-width: 600px) {
+    #seccion-muestra-seleccion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#ver-mapa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+#mapa{
+    margin: 2rem;
+    border: 1px solid white;
+}
+
+.agrupa-btn-direcciones{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-direcciones{
+   border-radius: 50px;
+   color: white;
+   font-size: 2.5rem;
+   border: none;
+   background-color: rgb(255, 55, 0);
+   margin: 1rem;
+   height: 50px;
+   width: 50px;
+   box-shadow: 0 0 10px 5px white;
+}
+
+.btn-direcciones:hover{
+    background-color: #e10c0c;
+    cursor: pointer;
+ }
+
+@media (max-width: 600px){
+    #ver-mapa div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .span-#resultado-combate, .span-#game-over{
+        text-align: center
+    }
+
+    .agrupa-btn-direcciones{
+        display: flex;
+        flex-direction: row;
+    }
+    }
+
+/* @media (max-width: 600px) {
+    #botones-ataque {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  } */
